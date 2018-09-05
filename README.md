@@ -20,10 +20,22 @@ read.dta("hsb.dta", convert.dates = TRUE, convert.factors = TRUE, missing.type =
                convert.underscore = FALSE, warn.missing.labels = TRUE)
 ``` 
 
+I prefer the tidyverse approach, personally:
+```
+hsb <- haven::read_dta("hsb.dta")
+```
+but unfortunately it's not working for the `.sav` files. I'll get it figured out this weekend hopefully. It doesn't seem to matter for now because we aren't currently using the Hox Moerbeek and vdSchoot datasets (yet?). 
+
 ### Datasets:
 * `hsb` (High School and Beyond) 
 * `pop` (Student Popularity)
 * more to come 
+
+#### useage: 
+
+```
+hsb<-data(hsb)
+```
 
 ## Functions
 
