@@ -1,0 +1,14 @@
+Package: edlf8360
+Type: Package
+Title: Functions and Data for EDLF 8360 (Multilevel Modeling)
+Version: 0.1.0
+Author: Andrew McCartney
+Maintainer: Andrew McCartney <acm9q@virginia.edu>
+Description: Contains packages and data associated with EDLF 8360
+    Maintained by Andrew McCartney and updated by classmates.
+    Datasets from Jox, Moerbeek and van de Schoot (2018) and Rabe-Hesketh and Skrondal (2012)
+License: What license is it under?
+Encoding: UTF-8
+LazyData: true
+Imports: dplyr, ggplot2, margins
+RoxygenNote: 6.0.1
