@@ -15,8 +15,10 @@ Over time, the package will grow to contain all datasets contained within the te
 
 I am using read.dta from the foreign package to read in Stata data files:
 
+```
 read.dta("hsb.dta", convert.dates = TRUE, convert.factors = TRUE, missing.type = FALSE, 
                convert.underscore = FALSE, warn.missing.labels = TRUE)
+``` 
 
 ### Datasets:
 * `hsb` (High School and Beyond) 
