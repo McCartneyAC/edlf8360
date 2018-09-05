@@ -40,7 +40,7 @@ hsb %>%
 Takes a pre-specified linear model and plots a margins plot using ggplot2. This is done without styling or labels, so these must be added post-hoc. 
 
 ``` 
-model5<-(mathach ~ minority + female + ses, data = hsb)
+model5<-lm(mathach ~ minority + female + ses, data = hsb)
 plot_margins(model5)
 ```
 
