@@ -25,7 +25,8 @@ So far, I have found two useful functions:
 Centers a variable on a given center. Should be useable within a tidy data pipe, e.g. 
 ```
 hsb %>%
-  center(ses, mean(ses)
+  center(ses, mean(ses))
+  
   
 # or 
 
