@@ -79,6 +79,7 @@ Takes a pre-specified linear model and plots a margins plot using ggplot2. This 
 model5<-lm(mathach ~ minority + female + ses, data = hsb)
 plot_margins(model5)
 ```
+![](https://github.com/McCartneyAC/edlf8360/blob/master/data/margin_model5.png)
 
 ### Calc_ICC
 coming as soon as we cover the topic
