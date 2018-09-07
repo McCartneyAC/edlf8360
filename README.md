@@ -20,7 +20,7 @@ Over time, the package will grow to contain all datasets contained within the te
 #### useage: 
 
 ```
-hsb<-data(hsb)
+data(hsb)
 ```
 
 ## Functions
