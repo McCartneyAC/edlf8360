@@ -70,6 +70,7 @@ Multiple R-squared:  0.1044,	Adjusted R-squared:  0.08905
 F-statistic: 6.817 on 2 and 117 DF,  p-value: 0.001584
 
 ```
+NOTE: The structure of this means that no specified model will be saved into the global environment, so, e.g., the `plot_margins` function can't be used after `regress`. 
 
 ### Margins Plots
 
