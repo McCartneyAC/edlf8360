@@ -22,3 +22,10 @@ plot_margins <- function (lm) {
     geom_hline(yintercept = 0) +
     theme(axis.text.x = element_text())
 }
+
+
+regress <- function(df, ...) {
+  summary(
+    lm(data = df, ...)
+  )
+}
