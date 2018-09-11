@@ -38,3 +38,12 @@ regress <- function(df, cluster = NA, ...) {
       )
     }
 }
+
+
+ICC<-function(model){
+  # input must be a null model with lme4::lmer
+  # e.g. model2<-lmer(lnwg ~ 1 + (1 |id), data = hours)
+  output<-as.data.frame(VarCorr(model1))
+  rho <- (output$sdcor[1]^2 / ( output$sdcor[1]^2+output$sdcor[2]^2 ))
+  return(rho)
+}
