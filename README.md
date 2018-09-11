@@ -87,3 +87,12 @@ plot_margins(model5)
 
 `psych` provides `psych::ICC` which has several different implementations of ICC calculations; however, these are specifically derived for inter-rater reliability estimates and it's not clear if they'll be useful for mixed effects models because 1) which specification do we need? 2) the matrix operation means we'll need some procedure for using `select`, I guess, with the variables being different (not the case for inter-rater) and 3) it should be as simple as doing `icc(model5)` `> 0.25` or something. I'm going to keep thinking about this. 
 
+
+
+SOLVED. 
+
+```
+model2<-lmer(lnwg ~ 1 + (1 |id), data = hours)
+ICC(model2)
+[1] 0.8250423
+```
