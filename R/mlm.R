@@ -24,19 +24,18 @@ plot_margins <- function (lm) {
 }
 
 
-regress <- function(df, cluster = NA, ...) {
-  if (is.na(cluster)){
-  summary(
-    lm(data = df, ...)
-  )
-  } else {
-    clust<-enquo(cluster)
+regress<- function(df, cluster = NA, ...) {
+  require(miceadds)
+  require(multiwayvcov)
+  if (is.na(cluster)) {
     summary(
-      lm.cluster(data = df, cluster = !!clust, ...)
-      # lm.cluster(data = df, cluster := !!clust, ...)
-      # could get buggy--check the tidyeval in practice
-      )
-    }
+      lm(data = df, ...)
+    )
+  } else {
+    summary(
+      lm.cluster(data = df, cluster = cluster, ...)
+    )
+  }
 }
 
 
