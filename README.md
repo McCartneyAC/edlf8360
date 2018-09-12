@@ -15,12 +15,15 @@ Over time, the package will grow to contain all datasets contained within the te
 ### Datasets:
 * `hsb` (High School and Beyond) 
 * `pop` (Student Popularity)
+* `hours` (from Ziliak (1997) and consists of panel data on 532 men with annual waves from 1979 to 1988.) 
 * more to come 
 
 #### useage: 
 
 ```
 data(hsb)
+
+data(hours)
 ```
 
 ## Functions
@@ -71,6 +74,8 @@ F-statistic: 6.817 on 2 and 117 DF,  p-value: 0.001584
 
 ```
 NOTE: The structure of this means that no specified model will be saved into the global environment, so, e.g., the `plot_margins` function can't be used after `regress`. 
+
+My goal is to extend this to allow for clustered standard errors, but that is currently glitching me. I also intend to add a specification for mixed effects but that might now work. 
 
 ### Margins Plots
 
