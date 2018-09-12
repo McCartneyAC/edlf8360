@@ -46,3 +46,12 @@ ICC<-function(model){
   rho <- (output$sdcor[1]^2 / ( output$sdcor[1]^2+output$sdcor[2]^2 ))
   return(rho)
 }
+
+
+ESS <- function(model, participants, clusters = 0) {
+  m <- (participants / cluster)
+  k <- clusters
+  r <- ICC(model)
+  ESS <- (m*k)/( 1 + (m-1)*r)
+  return(ESS)
+}
