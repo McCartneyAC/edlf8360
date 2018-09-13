@@ -75,7 +75,18 @@ F-statistic: 6.817 on 2 and 117 DF,  p-value: 0.001584
 ```
 NOTE: The structure of this means that no specified model will be saved into the global environment, so, e.g., the `plot_margins` function can't be used after `regress`. 
 
-My goal is to extend this to allow for clustered standard errors, but that is currently glitching me. I also intend to add a specification for mixed effects but that might now work. 
+This function also works with clustered standard errors (though it requires more packages to be downloaded to do so). 
+
+```
+regress(hsb, formula = mathach ~ ses , cluster = "schoolid")
+```
+```
+R^2= 0.13014 
+
+            Estimate Std. Error  t value      Pr(>|t|)
+(Intercept) 12.74740  0.1694473 75.22927  0.000000e+00
+ses          3.18387  0.1334850 23.85190 9.677759e-126
+```
 
 ### Margins Plots
 
@@ -100,4 +111,12 @@ SOLVED.
 model2<-lmer(lnwg ~ 1 + (1 |id), data = hours)
 ICC(model2)
 [1] 0.8250423
+```
+
+### Effective Sample Size:
+
+`ESS()` will calculate an effective sample size when given a null model, a number of participants, and a number of clusters. 
+
+```
+ESS(model1, participants = 1000, clusters = 50)
 ```
