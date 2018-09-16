@@ -2,7 +2,7 @@
 
 An R package for EDLF 8360 at UVA's School of Education and Human Development (Fall 2018). 
 
-## installation
+## Installation
 You know the drill:
 ```
 devtools::install_github("McCartneyAC/edlf8360")
