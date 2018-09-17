@@ -105,18 +105,18 @@ plot_margins(model5)
 
 
 
-SOLVED. 
+#### SOLVED. 
 
 ```
 model2<-lmer(lnwg ~ 1 + (1 |id), data = hours)
-ICC(model2)
+icc(model2)
 [1] 0.8250423
 ```
 
 ### Effective Sample Size:
 
-`ESS()` will calculate an effective sample size when given a null model, a number of participants, and a number of clusters. 
+`ess()` will calculate an effective sample size when given a null model, a number of participants, and a number of clusters. 
 
 ```
-ESS(model1, participants = 1000, clusters = 50)
+ess(model1, participants = 1000, clusters = 50)
 ```
