@@ -39,19 +39,19 @@ regress<- function(df, cluster = NA, ...) {
 }
 
 
-ICC<-function(model){
+icc<-function(model){
   # input must be a null model with lme4::lmer
   # e.g. model2<-lmer(lnwg ~ 1 + (1 |id), data = hours)
-  output<-as.data.frame(VarCorr(model1))
+  output<-as.data.frame(VarCorr(model))
   rho <- (output$sdcor[1]^2 / ( output$sdcor[1]^2+output$sdcor[2]^2 ))
   return(rho)
 }
 
 
-ESS <- function(model, participants, clusters = 0) {
+ess <- function(model, participants, clusters = 0) {
   m <- (participants / cluster)
   k <- clusters
-  r <- ICC(model)
+  r <- ess(model)
   ESS <- (m*k)/( 1 + (m-1)*r)
   return(ESS)
 }
