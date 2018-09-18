@@ -9,6 +9,14 @@ center <- function (df, var, center = 0){
   mutate(df, !!varname := (!!user_var-!!center))
 }
 
+standardize <-function(df, var){
+  # creates z-score of variable input
+  require(dplyr)
+  user_var<-enquo(var)
+  varname <- quo_name(user_var)
+  mutate(df, !!varname := (!!user_var - mean(!!user_var))/sd(!!user_var))
+}
+
 
 
 plot_margins <- function (lm) {
