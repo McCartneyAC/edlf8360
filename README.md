@@ -49,10 +49,10 @@ hsb %>%
 Similar to center, standardize performs a variable adjustment that can be contained within a pipe. In this case, `standardize` performs a z-transformation on a given variable, as such:
 
 ```
-> hsb %>% 
-+   select(ses, mathach) %>% 
-+   standardize(mathach) %>% 
-+   head()
+hsb %>% 
+  select(ses, mathach) %>% 
+  standardize(mathach) %>% 
+  head()
 ```
 ```
 # A tibble: 6 x 2
