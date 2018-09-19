@@ -43,6 +43,28 @@ hsb %>%
 hsb %>%
   center(mathach, 5)
 ```  
+
+### Standardize
+
+Similar to center, standardize performs a variable adjustment that can be contained within a pipe. In this case, `standardize` performs a z-transformation on a given variable, as such:
+
+```
+> hsb %>% 
++   select(ses, mathach) %>% 
++   standardize(mathach) %>% 
++   head()
+```
+```
+# A tibble: 6 x 2
+      ses mathach
+    <dbl>   <dbl>
+1 -1.53    -0.999
+2 -0.588    1.01 
+3 -0.528    1.11 
+4 -0.668   -0.577
+5 -0.158    0.749
+6  0.0220  -1.19 
+```
 ### Regress
 Named as an analogue to stata's `regress` command, this function has two features. First, it allows regression to be the final step of a data pipeline, and secondly it specifies a linear model and summarizes it in a single step. It also means that the `data=` argument of a `lm()` is no longer necessary. It does this by calling `summarize(lm())` while re-ordering the arguments of `lm()` for `data=` to come first. For example: 
 
