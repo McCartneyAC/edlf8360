@@ -15,7 +15,12 @@ Over time, the package will grow to contain all datasets contained within the te
 ### Datasets:
 * `hsb` (High School and Beyond) 
 * `pop` (Student Popularity)
-* `hours` (from Ziliak (1997) and consists of panel data on 532 men with annual waves from 1979 to 1988.) 
+* `hours` (from Ziliak (1997) and consists of panel data on 532 men with annual waves from 1979 to 1988.)
+* Datasets from Field, Miles, and Field: 
+** `surgery`
+** `honeymoon`
+** `miller2007`
+** `hill2007`
 * more to come 
 
 #### useage: 
