@@ -49,6 +49,13 @@ hsb %>%
   center(mathach, 5)
 ```  
 
+The first example above does a grand-mean center; however, often in HLM we need to group mean center. This is easily accomplished:
+```
+hsb %>% 
+  group_by(schoolid) %>% 
+  center(mathach, mean(mathach)) 
+```
+
 ### Standardize
 
 Similar to center, standardize performs a variable adjustment that can be contained within a pipe. In this case, `standardize` performs a z-transformation on a given variable, as such:
