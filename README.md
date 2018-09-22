@@ -21,6 +21,7 @@ Over time, the package will grow to contain all datasets contained within the te
   * `honeymoon`
   * `miller2007`
   * `hill2007`
+* `jsp` from homework 1
 * more to come 
 
 #### useage: 
