@@ -59,7 +59,7 @@ icc<-function(model){
 ess <- function(model, participants, clusters = 0) {
   m <- (participants / cluster)
   k <- clusters
-  r <- ess(model)
+  r <- edlf8360::icc(model)
   ESS <- (m*k)/( 1 + (m-1)*r)
   return(ESS)
 }
