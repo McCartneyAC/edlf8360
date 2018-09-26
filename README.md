@@ -27,9 +27,9 @@ Over time, the package will grow to contain all datasets contained within the te
 #### useage: 
 
 ```
-data(hsb)
+data("hsb")
 
-data(hours)
+data("hours")
 ```
 
 ## Functions
