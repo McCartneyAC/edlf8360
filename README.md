@@ -133,6 +133,7 @@ plot_margins(model5)
 ```
 ![](https://github.com/McCartneyAC/edlf8360/blob/master/data/margin_model5.png)
 
+For a better take on this, see [sjplot](https://strengejacke.github.io/sjPlot/articles/plot_model_estimates.html).
 
 #### Interactions in margins plots
 
