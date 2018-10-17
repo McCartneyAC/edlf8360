@@ -185,3 +185,15 @@ icc(model2)
 ```
 ess(model1, participants = 1000, clusters = 50)
 ```
+
+### Construct a 95% prediction interval for the school slopes
+```
+slopes_CI <- function(estimate, variance) {
+  
+  ub<-estimate + (1.96*sqrt(variance))
+  lb<-estimate - (1.96*sqrt(variance))
+  print(paste("UB is", round(ub,3), "LB is", round(lb,3)))
+}
+
+slopes_CI(2.19, 0.69)
+```
