@@ -63,3 +63,12 @@ ess <- function(model, participants, clusters = 0) {
   ESS <- (m*k)/( 1 + (m-1)*r)
   return(ESS)
 }
+
+slopes_CI <- function(estimate, variance) {
+  # take the output from a random slopes regression and
+  # calculate the 95% confidence interval from the slopes. 
+  ub<-estimate + (1.96*sqrt(variance))
+  lb<-estimate - (1.96*sqrt(variance))
+  print(paste("UB is: ", round(ub,3), ". LB is", round(lb,3), "."))
+}
+
